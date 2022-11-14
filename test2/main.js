@@ -14,14 +14,14 @@ class Message {
     }
 }
 
-class Messenger{
-    messages = [];
+    class Messenger{
+    texts = [];
 
     send(author, text){
-        this.messages.push(new Message(author, text));
+        this.texts.push(new Message(author, text));
     }
     show_history(){
-        this.messages.forEach((i) => {
+        this.texts.forEach((i) => {
             console.log(i.toString());
         });
     }
@@ -30,4 +30,5 @@ class Messenger{
 const messenger = new Messenger();
 messenger.send('rutam', 'hello');
 messenger.send('egor', ' privet');
+messenger.send('alex','poka'
 messenger.show_history();
