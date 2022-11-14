@@ -21,8 +21,8 @@ class Messenger{
         this.messages.push(new Message(author, text));
     }
     show_history(){
-        this.messages.forEach((mes) => {
-            console.log(mes.toString());
+        this.messages.forEach((i) => {
+            console.log(i.toString());
         });
     }
 }
