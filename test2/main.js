@@ -22,13 +22,16 @@ class Message {
     }
     show_history(){
         this.texts.forEach((i) => {
+            
             console.log(i.toString());
         });
     }
 }
 
 const messenger = new Messenger();
-messenger.send('rutam', 'hello');
+
 messenger.send('egor', ' privet');
+
 messenger.send('alex','poka'
+               
 messenger.show_history();
