@@ -1,37 +1,30 @@
-const time = () => {
-    let now = new Date();
-    return `${now.getHours()}:${now.getMinutes()}`
+function vremya() {
+    let data = new Date();
+    return ${data.getHours()}:${data.getMinutes()}
 }
-
 class Message {
-    constructor(author, message){
-        this.author = author;
-        this.time = time();
-        this.message = message;
+    constructor(celovek, message){
+    this.message = message;
+    this.celovek = celovek;
+    this.vremya = vremya();
     }
     toString(){
-        return `${this.time} ${this.author}: ${this.message}`;
+    return ${this.vremya} ${this.celovek}: ${this.message};
     }
 }
-
-    class Messenger{
-    texts = [];
-
-    send(author, text){
-        this.texts.push(new Message(author, text));
+class Messenger{
+    messages = [];
+    send(celovek, text){
+    this.messages.push(new Message(celovek, text));
     }
     show_history(){
-        this.texts.forEach((i) => {
-            
-            console.log(i.toString());
-        });
+        this.messages.map(function(m){
+            console.log(m.toString())
+        }
+        );
     }
 }
-
-const messenger = new Messenger();
-
-messenger.send('egor', ' privet');
-
-messenger.send('alex','poka'
-               
-messenger.show_history();
+const messages = new Messenger();
+messages.send('Rustam', 'kkkk');
+messages.send('Rustam', 'oooo');
+messages.show_history();
